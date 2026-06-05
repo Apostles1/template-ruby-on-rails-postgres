@@ -1,0 +1,7 @@
+uses: elmahio/github-create-deployment-action@v1
+with:
+  apiKey: ${{ secrets.ELMAH_IO_API_KEY }}
+  description: ${{ github.event.head_commit.message }}
+  version: ${{ github.run_number }}
+  userName: ${{ github.actor }}
+  logId: ${{ secrets.ELMAH_IO_LOG_ID }}
